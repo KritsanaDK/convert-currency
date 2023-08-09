@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import money from './img/money.png'
+import CurrentcyComponent from './components/CurrentcyComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <img src={money} alt="Logo" />
+      <h1>แอพแปรงสกุลเงิน(API)</h1>
+
+      <div className='container'>
+        <CurrentcyComponent />
+        <div className='equal'>=</div>
+        <CurrentcyComponent />
+      </div>
+
     </div>
   );
 }
