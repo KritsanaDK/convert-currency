@@ -1,7 +1,7 @@
 import './CurrencyComponent.css'
 
 const CurrencyComponent = (props) => {
-    const { currencyChoice, selectCurency, changeCurrency } = props;
+    const { currencyChoice, selectCurency, changeCurrency, amount, onChangeAmont } = props;
 
 
     return (
@@ -12,7 +12,7 @@ const CurrencyComponent = (props) => {
                     <option key={choice} value={choice}>{choice}</option>
                 )}
             </select>
-            <input type="number" />
+            <input type="number" value={amount} onChange={onChangeAmont}/>
 
         </div>
     )
